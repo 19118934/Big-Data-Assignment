@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
 
 #mapred streaming
-time mapred streaming -files mapper.py,reducer.py -input data1.csv -output result1 -mapper "python3 mapper.py" -reducer "python3 reducer.py"
+time mapred streaming -files mapper.py,reducer.py -input ratings.csv -output result1 -mapper "python3 mapper.py" -reducer "python3 reducer.py"
 
 #Run MapReduce on single instance 
-time cat data1.csv | python3 mapper.py | sort - | python3 reducer.py > output local.txt
+time cat ratings.csv | python3 mapper.py | sort - | python3 reducer.py > output local.txt
